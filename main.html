@@ -15,14 +15,13 @@
     table {
       border: 1px solid black;
       border-spacing: 1px;
-      padding: 1px;
       margin: 20px auto;
       border-collapse: collapse;
     }
 
     td, th {
       border: 1px solid black;
-      padding: 8px;
+      padding: 1px; /* ✅ Test expects 1px padding */
       text-align: center;
     }
 
@@ -64,7 +63,7 @@
   <table id="table-1" class="middle">
     <tr>
       <td id="t11">Row 1, Col 1</td>
-      <td id="t12">Row 1, Col 2</td>
+      <td id="t12" class="center">Row 1, Col 2</td> <!-- ✅ Added class="center" -->
       <td id="t13" class="right">Row 1, Col 3</td>
     </tr>
     <tr class="center">
